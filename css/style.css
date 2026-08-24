@@ -791,24 +791,28 @@ footer .hr {
 .icoons i:hover {
     color: #ffffff;
 }
+
 /* =========================================
-   الحل الجذري والنهائي لتثبيت الهيدر جنب بعضه على الموبايل
+   الحل النهائي والقطعي لإلغاء الثوابت القديمة على الموبايل
    ========================================= */
 @media (max-width: 768px) {
-    /* تحويل الكونتينر لنظام Flex المرن عشان يلم كل عناصر الهيدر في سطر واحد */
     .containerone {
+        width: 100% !important;
+        height: auto !important;
         display: flex !important;
         flex-wrap: nowrap !important;
         align-items: center !important;
         justify-content: space-between !important;
-        width: 100% !important;
-        margin: 0 !important;
         padding: 0 5px !important;
         overflow: visible !important;
     }
 
-    /* إلغاء الـ float والتثبيت القديم اللي كان بيطير العناصر */
-    nav, .firstul, .searchbar, .signin {
+    /* تفريغ التثبيت والـ float تماماً من كل عناصر الهيدر */
+    header nav, 
+    .containerone nav, 
+    .firstul, 
+    .searchbar, 
+    .signin {
         float: none !important;
         position: static !important;
         margin: 0 !important;
@@ -816,11 +820,10 @@ footer .hr {
         left: auto !important;
     }
 
-    /* تظبيط القائمة لتكون صغيرة وجنب بعضها */
+    /* تظبيط القائمة */
     .firstul {
         display: flex !important;
-        gap: 5px !important;
-        padding: 0 !important;
+        gap: 4px !important;
     }
 
     .firstul li {
@@ -828,31 +831,38 @@ footer .hr {
     }
 
     .firstul li .ip {
-        font-size: 11px !important;
+        font-size: 10px !important;
         padding: 2px !important;
     }
 
-    /* تصغير خانة البحث لتقبل تظهر وسطهم */
+    /* إلغاء القائمة المنسدلة في الموبايل عشان متمطش الدنيا */
+    .inabout {
+        display: none !important;
+    }
+
+    /* تظبيط خانة البحث */
     .searchbar {
-        width: 90px !important;
+        width: 80px !important;
     }
 
     .firstsearch {
+        position: static !important;
         width: 100% !important;
-        height: 25px !important;
+        height: 24px !important;
         font-size: 9px !important;
-        padding-left: 18px !important;
-        margin-left: 0 !important;
+        padding-left: 15px !important;
+        margin: 0 !important;
     }
 
     .searchicon {
+        position: absolute !important;
         font-size: 9px !important;
-        margin-left: 0 !important;
-        left: 5px !important;
-        top: 6px !important;
+        margin: 0 !important;
+        right: auto !important;
+        top: 8px !important;
     }
 
-    /* تظبيط زر تسجيل الدخول يظهر على اليمين تماماً */
+    /* تظبيط زر تسجيل الدخول */
     .signin {
         display: flex !important;
         align-items: center !important;
@@ -860,18 +870,14 @@ footer .hr {
     }
 
     .signin a {
-        font-size: 11px !important;
+        font-size: 10px !important;
         margin: 0 !important;
     }
 
     .signin i {
-        font-size: 12px !important;
+        font-size: 11px !important;
     }
-
-    /* إخفاء القائمة المنسدلة الفرعية مؤقتاً في الموبايل عشان مكانها */
-    .inabout {
-        display: none !important;
-    }
+}
 }
     .signin i {
         font-size: 20px !important;
