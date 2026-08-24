@@ -791,39 +791,53 @@ footer .hr {
 .icoons i:hover {
     color: #ffffff;
 }
-
 /* =========================================
-   الحل النهائي والقطعي لإلغاء الثوابت القديمة على الموبايل
+   النسف النهائي لأماكن الهيدر القديمة على الموبايل
    ========================================= */
 @media (max-width: 768px) {
-    .containerone {
-        width: 100% !important;
+    /* 1. إجبار الهيدر نفسه على احتوائهم */
+    header {
         height: auto !important;
+        min-height: 80px !important;
+        position: relative !important;
+    }
+
+    /* 2. تحويل الـ containerone لـ Flexbox يجمعهم غصب عن أي float قديم */
+    .containerone {
         display: flex !important;
         flex-wrap: nowrap !important;
         align-items: center !important;
         justify-content: space-between !important;
-        padding: 0 5px !important;
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100% !important;
+        padding: 10px 5px !important;
+        margin: 0 !important;
+        position: relative !important;
         overflow: visible !important;
     }
 
-    /* تفريغ التثبيت والـ float تماماً من كل عناصر الهيدر */
+    /* 3. إلغاء أي absolute أو float قديم كان مطير العناصر */
     header nav, 
     .containerone nav, 
     .firstul, 
     .searchbar, 
     .signin {
         float: none !important;
-        position: static !important;
+        position: relative !important;
         margin: 0 !important;
+        padding: 0 !important;
         right: auto !important;
         left: auto !important;
+        top: auto !important;
+        bottom: auto !important;
     }
 
-    /* تظبيط القائمة */
+    /* 4. تصغير القائمة لتظهر بجانب بعضها */
     .firstul {
         display: flex !important;
         gap: 4px !important;
+        align-items: center !important;
     }
 
     .firstul li {
@@ -835,18 +849,17 @@ footer .hr {
         padding: 2px !important;
     }
 
-    /* إلغاء القائمة المنسدلة في الموبايل عشان متمطش الدنيا */
     .inabout {
         display: none !important;
     }
 
-    /* تظبيط خانة البحث */
+    /* 5. تصغير صندوق البحث */
     .searchbar {
-        width: 80px !important;
+        width: 75px !important;
+        margin: 0 2px !important;
     }
 
     .firstsearch {
-        position: static !important;
         width: 100% !important;
         height: 24px !important;
         font-size: 9px !important;
@@ -857,16 +870,17 @@ footer .hr {
     .searchicon {
         position: absolute !important;
         font-size: 9px !important;
+        left: 4px !important;
+        top: 6px !important;
         margin: 0 !important;
-        right: auto !important;
-        top: 8px !important;
     }
 
-    /* تظبيط زر تسجيل الدخول */
+    /* 6. تصغير زر تسجيل الدخول ليلتصق باليمين */
     .signin {
         display: flex !important;
         align-items: center !important;
         gap: 2px !important;
+        margin: 0 !important;
     }
 
     .signin a {
@@ -876,10 +890,6 @@ footer .hr {
 
     .signin i {
         font-size: 11px !important;
-    }
-}
-}
-    .signin i {
-        font-size: 20px !important;
+        margin: 0 !important;
     }
 }
