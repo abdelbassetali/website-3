@@ -792,55 +792,87 @@ footer .hr {
     color: #ffffff;
 }
 /* =========================================
-   إصلاح الـ Mobile View للهيدر والموقع
-   ========================================= */
-/* =========================================
-   إصلاح الـ Mobile View للهيدر (شغال 100%)
-   ========================================= */
-/* =========================================
-   تصغير المسافات والخطوط لتبقى عناصر الهيدر بجانب بعضها على الموبايل
+   الحل الجذري والنهائي لتثبيت الهيدر جنب بعضه على الموبايل
    ========================================= */
 @media (max-width: 768px) {
-    /* 1. تصغير مسافة القوائم وجعلها متجاورة */
+    /* تحويل الكونتينر لنظام Flex المرن عشان يلم كل عناصر الهيدر في سطر واحد */
+    .containerone {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 5px !important;
+        overflow: visible !important;
+    }
+
+    /* إلغاء الـ float والتثبيت القديم اللي كان بيطير العناصر */
+    nav, .firstul, .searchbar, .signin {
+        float: none !important;
+        position: static !important;
+        margin: 0 !important;
+        right: auto !important;
+        left: auto !important;
+    }
+
+    /* تظبيط القائمة لتكون صغيرة وجنب بعضها */
+    .firstul {
+        display: flex !important;
+        gap: 5px !important;
+        padding: 0 !important;
+    }
+
     .firstul li {
-        margin-right: 15px !important; /* تقليل المسافة الواسعة اللي كانت 110px */
-        margin-top: 15px !important;
+        margin: 0 !important;
     }
 
     .firstul li .ip {
-        font-size: 14px !important; /* تصغير حجم خط القائمة شوية */
+        font-size: 11px !important;
+        padding: 2px !important;
     }
 
-    /* 2. تصغير وإزاحة شريط البحث عشان يفضل جنبهم أو في نفس النطاق */
+    /* تصغير خانة البحث لتقبل تظهر وسطهم */
     .searchbar {
-        margin-right: 5% !important;
-        margin-top: 18px !important;
+        width: 90px !important;
     }
 
     .firstsearch {
-        width: 130px !important; /* تصغير عرض خانة البحث */
-        height: 32px !important;
-        font-size: 14px !important;
-        padding-left: 30px !important;
+        width: 100% !important;
+        height: 25px !important;
+        font-size: 9px !important;
+        padding-left: 18px !important;
+        margin-left: 0 !important;
     }
 
     .searchicon {
-        margin-left: 10px !important;
-        font-size: 14px !important;
+        font-size: 9px !important;
+        margin-left: 0 !important;
+        left: 5px !important;
+        top: 6px !important;
     }
 
-    /* 3. تصغير وإزاحة زر تسجيل الدخول ليفضل جنبهم */
+    /* تظبيط زر تسجيل الدخول يظهر على اليمين تماماً */
     .signin {
-        margin-right: -10% !important;
-        margin-top: 18px !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 2px !important;
     }
 
     .signin a {
-        font-size: 14px !important;
-        margin-right: 10px !important;
-        margin-left: 5px !important;
+        font-size: 11px !important;
+        margin: 0 !important;
     }
 
+    .signin i {
+        font-size: 12px !important;
+    }
+
+    /* إخفاء القائمة المنسدلة الفرعية مؤقتاً في الموبايل عشان مكانها */
+    .inabout {
+        display: none !important;
+    }
+}
     .signin i {
         font-size: 20px !important;
     }
