@@ -791,6 +791,181 @@ footer .hr {
 .icoons i:hover {
     color: #ffffff;
 }
+/* =========================================
+   موبايل ريسبونسف (Mobile Responsive Adjustments)
+   ========================================= */
+@media (max-width: 768px) {
+    /* 1. الهيدر والقائمة */
+    .containerone {
+        width: 100%;
+        padding: 0 15px;
+    }
 
+    /* إخفاء القائمة العادية، وممكن تظهرها بشكل عمودي لو حابب */
+    nav {
+        position: relative;
+        width: 100%;
+    }
+
+    .firstul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 70px;
+    }
+
+    .firstul li {
+        margin-right: 0;
+        margin-top: 10px;
+    }
+
+    .firstul li .ip {
+        font-size: 16px;
+        padding: 5px;
+    }
+
+    /* شريط البحث و تسجيل الدخول */
+    .searchbar {
+        float: none;
+        margin: 20px auto;
+        width: 100%;
+        text-align: center;
+    }
+
+    .firstsearch {
+        margin-left: 0;
+        width: 80%;
+    }
+
+    .searchicon {
+        margin-left: -30px;
+    }
+
+    .signin {
+        float: none;
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    .signin a {
+        margin-right: 0;
+    }
+
+    /* النصوص في الهيدر */
+    .textheader {
+        position: relative;
+        top: 20px;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .textheader .p4 {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .stretch {
+        width: 100px;
+    }
+
+    /* إخفاء العناصر الزائدة في الهيدر للموبايل عشان ما يبقاش زحمة */
+    .div2header img, .box {
+        display: none;
+    }
+
+    /* 2. قسم الـ Main */
+    main {
+        height: auto;
+        padding: 40px 15px;
+    }
+
+    main img {
+        position: relative;
+        width: 100%;
+        height: auto;
+        transform: none;
+        margin-top: 20px;
+    }
+
+    .words {
+        position: relative;
+        top: 0;
+        left: 0;
+        text-align: center;
+    }
+
+    .words p {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .words h1 span {
+        font-size: 35px;
+    }
+
+    /* إخفاء الدوائر لو هتعمل زحمة في الموبايل، أو تسيبها براحتك */
+    main .circle1, main .circle2, main .circle12, 
+    main .circle13, main .circle14, main .circle15 {
+        display: none;
+    }
+
+    /* 3. الصور المائلة (Section 1) */
+    .bothimgs {
+        height: auto;
+    }
+
+    .firstimg, .secondimg {
+        position: relative;
+        width: 100%;
+        height: 60vh;
+        transform: none !important;
+        border: none !important;
+        margin-bottom: 20px;
+    }
+
+    .foverlay {
+        font-size: 40px;
+        margin-top: 15%;
+    }
+
+    .soverlay {
+        padding: 0 15px;
+        font-size: 18px;
+    }
+
+    /* 4. قسم الـ Reviews (Section 2) */
+    .section2 {
+        height: auto;
+        padding-bottom: 50px;
+    }
+
+    .pp1 {
+        width: 90%;
+        height: 60vh;
+        margin: 20px auto;
+    }
+
+    /* 5. قسم الـ Section 3 */
+    .section3 {
+        display: none; /* يفضل إخفاؤه في الموبايل لأنه معتمد على الجانب الأيمن بالشاشات الكبيرة */
+    }
+
+    /* 6. الفوتر */
+    footer {
+        height: auto;
+        padding-bottom: 30px;
+    }
+
+    .contacts {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contacts > div {
+        margin-bottom: 15px;
+    }
+}
 
 
