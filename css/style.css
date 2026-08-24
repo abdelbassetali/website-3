@@ -827,4 +827,36 @@ footer .hr {
         margin: 0;
         margin-top: 10px;
     }
+
+    /* 3. إلغاء الـ float وتظبيط البحث وتسجيل الدخول (الكود الجديد) */
+    .searchbar {
+        float: none;
+        position: relative;
+        margin: 15px auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        right: auto;
+    }
+
+    .firstsearch {
+        margin-left: 0;
+        width: 70%;
+    }
+
+    .searchicon {
+        margin-left: -30px;
+    }
+
+    .signin {
+        float: none;
+        position: relative;
+        margin: 10px auto;
+        text-align: center;
+        right: auto;
+    }
+
+    .signin a {
+        margin: 0;
+    }
 }
