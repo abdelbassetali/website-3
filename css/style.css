@@ -795,25 +795,23 @@ footer .hr {
    إصلاح الـ Mobile View للهيدر والموقع
    ========================================= */
 @media (max-width: 768px) {
-    /* 1. جعل الهيدر يأخذ ارتفاع تلقائي بدل 100vh الثابتة */
+    /* 1. نخلي الهيدر يمدد حسب محتواه ومش ارتفاع ثابت */
     header {
         height: auto;
-        padding-bottom: 50px;
-        overflow: hidden;
+        padding-bottom: 30px;
     }
 
     .containerone {
         width: 100%;
         height: auto;
-        padding: 0 15px;
+        padding: 0 10px;
         overflow: visible;
     }
 
-    /* 2. ترتيب القائمة (Nav) بشكل عمودي أو أفقي متناسق */
+    /* 2. نظبط مكان اللوجو والقائمة */
     nav {
         position: relative;
         width: 100%;
-        display: block;
     }
 
     .firstul {
@@ -821,104 +819,12 @@ footer .hr {
         flex-wrap: wrap;
         justify-content: center;
         gap: 15px;
-        margin-top: 60px;
+        margin-top: 50px;
         padding: 0;
     }
 
     .firstul li {
         margin: 0;
-    }
-
-    .firstul li .ip {
-        font-size: 15px;
-        padding: 5px;
-    }
-
-    /* 3. ضبط شريط البحث وزر تسجيل الدخول */
-    .searchbar {
-        float: none;
-        margin: 20px auto;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        right: auto;
-    }
-
-    .firstsearch {
-        margin-left: 0;
-        width: 80%;
-    }
-
-    .searchicon {
-        margin-left: -35px;
-    }
-
-    .signin {
-        float: none;
-        margin: 10px auto;
-        text-align: center;
-        right: auto;
-    }
-
-    .signin a {
-        margin: 0;
-    }
-
-    /* 4. تعديل صندوق الـ Discount عشان مايجيش فوق الكلام */
-    .box {
-        position: relative;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: auto;
-        text-align: center;
-        margin: 20px 0;
-    }
-
-    .box .pb1, .box .pb3 {
-        margin: 0;
-    }
-
-    .box .pb2 {
-        margin: 0;
-        font-size: 60px;
-    }
-
-    /* 5. نصوص الهيدر الرئيسية */
-    .textheader {
-        position: relative;
-        top: 0;
-        text-align: center;
-        width: 100%;
-        padding: 0 10px;
-        margin-top: 20px;
-    }
-
-    .textheader .p4 {
-        width: 100%;
-        font-size: 14px;
-        letter-spacing: 1px;
-    }
-
-    .stretch {
-        display: block;
-        margin: 10px auto;
-    }
-
-    /* 6. الصورة الكبيرة في الهيدر (نجعلها تظهر تحت الكلام بدل ما تداخله) */
-    .div2header img {
-        position: relative;
-        width: 100%;
-        height: auto;
-        max-height: 400px;
-        right: auto;
-        bottom: auto;
-        margin-top: 30px;
-        border: none;
-        display: block;
-    }
-
-    .points {
-        display: none; /* إخفاء النقاط الزائدة في الموبايل */
+        margin-top: 10px;
     }
 }
