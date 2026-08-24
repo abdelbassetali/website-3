@@ -794,69 +794,97 @@ footer .hr {
 /* =========================================
    إصلاح الـ Mobile View للهيدر والموقع
    ========================================= */
+/* =========================================
+   إصلاح الـ Mobile View للهيدر (شغال 100%)
+   ========================================= */
 @media (max-width: 768px) {
-    /* 1. نخلي الهيدر يمدد حسب محتواه ومش ارتفاع ثابت */
     header {
-        height: auto;
+        height: auto !important;
         padding-bottom: 30px;
     }
 
     .containerone {
-        width: 100%;
-        height: auto;
+        width: 100% !important;
+        height: auto !important;
         padding: 0 10px;
-        overflow: visible;
+        overflow: visible !important;
     }
 
-    /* 2. نظبط مكان اللوجو والقائمة */
     nav {
-        position: relative;
-        width: 100%;
+        position: relative !important;
+        width: 100% !important;
     }
 
+    /* إلغاء الـ inline-block وترتيب القائمة تحت بعضها أو بشكل منظم */
     .firstul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-        margin-top: 50px;
-        padding: 0;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 10px !important;
+        margin-top: 20px !important;
+        padding: 0 !important;
     }
 
     .firstul li {
-        margin: 0;
-        margin-top: 10px;
+        margin: 0 !important;
     }
 
-    /* 3. إلغاء الـ float وتظبيط البحث وتسجيل الدخول (الكود الجديد) */
+    /* تظبيط خانة البحث في المنتصف وتحت القائمة */
     .searchbar {
-        float: none;
-        position: relative;
-        margin: 15px auto;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        right: auto;
+        float: none !important;
+        position: relative !important;
+        margin: 15px auto !important;
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        right: auto !important;
     }
 
     .firstsearch {
-        margin-left: 0;
-        width: 70%;
+        position: relative !important;
+        margin-left: 0 !important;
+        width: 75% !important;
     }
 
     .searchicon {
-        margin-left: -30px;
+        position: absolute !important;
+        margin-left: 0 !important;
+        right: 18% !important;
+        margin-top: 10px !important;
     }
 
+    /* تظبيط زر تسجيل الدخول تحته */
     .signin {
-        float: none;
-        position: relative;
-        margin: 10px auto;
-        text-align: center;
-        right: auto;
+        float: none !important;
+        position: relative !important;
+        margin: 10px auto !important;
+        text-align: center !important;
+        right: auto !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 8px !important;
     }
 
     .signin a {
-        margin: 0;
+        margin: 0 !important;
+    }
+
+    /* إخفاء الصورة الكبيرة وصندوق الديسكونت من الهيدر في الموبايل مؤقتًا عشان الزحمة */
+    .div2header img, 
+    .box, 
+    .points {
+        display: none !important;
+    }
+
+    .textheader {
+        position: relative !important;
+        top: 10px !important;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .textheader .p4 {
+        width: 100% !important;
     }
 }
