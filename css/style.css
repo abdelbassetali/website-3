@@ -439,6 +439,9 @@ main .circle12 {
     left: 15%;
     
 }
+.cc:hover{
+    opacity: .2;
+  }
 main .circle12:hover {
     position: absolute;
     width: 100px;
@@ -791,105 +794,443 @@ footer .hr {
 .icoons i:hover {
     color: #ffffff;
 }
-/* =========================================
-   النسف النهائي لأماكن الهيدر القديمة على الموبايل
-   ========================================= */
+
 @media (max-width: 768px) {
-    /* 1. إجبار الهيدر نفسه على احتوائهم */
-    header {
-        height: auto !important;
-        min-height: 80px !important;
-        position: relative !important;
-    }
+  * {
+    box-sizing: border-box !important;
+  }
 
-    /* 2. تحويل الـ containerone لـ Flexbox يجمعهم غصب عن أي float قديم */
-    .containerone {
-        display: flex !important;
-        flex-wrap: nowrap !important;
-        align-items: center !important;
-        justify-content: space-between !important;
-        width: 100% !important;
-        height: auto !important;
-        max-width: 100% !important;
-        padding: 10px 5px !important;
-        margin: 0 !important;
-        position: relative !important;
-        overflow: visible !important;
-    }
+  header .containerone {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    padding: 10px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
 
-    /* 3. إلغاء أي absolute أو float قديم كان مطير العناصر */
-    header nav, 
-    .containerone nav, 
-    .firstul, 
-    .searchbar, 
-    .signin {
-        float: none !important;
-        position: relative !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        right: auto !important;
-        left: auto !important;
-        top: auto !important;
-        bottom: auto !important;
-    }
+  header .imglogo {
+    max-width: 120px !important;
+    height: auto !important;
+    margin-bottom: 15px !important;
+  }
 
-    /* 4. تصغير القائمة لتظهر بجانب بعضها */
-    .firstul {
-        display: flex !important;
-        gap: 4px !important;
-        align-items: center !important;
-    }
+  header nav {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
 
-    .firstul li {
-        margin: 0 !important;
-    }
+  header nav .firstul {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    margin: 0 0 15px 0 !important;
+    list-style: none !important;
+  }
 
-    .firstul li .ip {
-        font-size: 10px !important;
-        padding: 2px !important;
-    }
+  header nav .firstul li {
+    margin: 5px 8px !important;
+  }
 
-    .inabout {
-        display: none !important;
-    }
+  header .searchbar {
+    width: 90% !important;
+    display: flex !important;
+    justify-content: center !important;
+    margin-bottom: 15px !important;
+  }
 
-    /* 5. تصغير صندوق البحث */
-    .searchbar {
-        width: 75px !important;
-        margin: 0 2px !important;
-    }
+  header .searchbar .firstsearch {
+    width: 30% !important;
+    padding: 8px !important;
+    box-sizing: border-box !important;
+    margin-left: 120px;
+    margin-top: 10px;
+  }
+  .searchicon{
+    margin-top: 25px;
+    margin-left: 210px;
+  }
+  .imglogo{
+    margin-top: 30px;
+  }
+  
+ header .signin {
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-bottom: 15px !important;
+    top: -30px !important;  
+    left: 90px !important; 
+  }
+  header .textheader {
+    position: relative !important;
+    width: 100% !important;
+    text-align: center !important;
+    padding: 20px 15px !important;
+    /* margin: 0 0 15px 0 !important; */
+    background: rgba(0, 0, 0, 0.4) !important; 
+    z-index: 3 !important;
+    box-sizing: border-box !important;
+    margin-top: -70px;
+  }
+.points{
+    margin-top: 50px;
+}
+  header .textheader .p1 {
+    font-size: 14px !important;
+    margin-bottom: 5px !important;
+  }
 
-    .firstsearch {
-        width: 100% !important;
-        height: 24px !important;
-        font-size: 9px !important;
-        padding-left: 15px !important;
-        margin: 0 !important;
-    }
+  header .textheader .p2 {
+    font-size: 20px !important;
+    line-height: 1.2 !important;
+    margin-bottom: 5px !important;
+  }
 
-    .searchicon {
-        position: absolute !important;
-        font-size: 9px !important;
-        left: 4px !important;
-        top: 6px !important;
-        margin: 0 !important;
-    }
+  header .textheader .p3 {
+    font-size: 18px !important;
+    margin-bottom: 10px !important;
+  }
 
-    /* 6. تصغير زر تسجيل الدخول ليلتصق باليمين */
-    .signin {
-        display: flex !important;
-        align-items: center !important;
-        gap: 2px !important;
-        margin: 0 !important;
-    }
+  header .textheader .p4 {
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+    margin-bottom: 15px !important;
+    padding: 0 10px !important;
+  }
 
-    .signin a {
-        font-size: 10px !important;
-        margin: 0 !important;
-    }
+  header .textheader .btn1 {
+ position: relative !important;
+    display: inline-block !important;
+    margin-top: 20px !important;  
+    margin-bottom: 10px !important; 
+    left: 0px !important;         
+    padding: 10px 25px !important;
+    font-size: 14px !important;
+    
+  }
 
-    .signin i {
-        font-size: 11px !important;
-        margin: 0 !important;
-    }
+  header .box {
+    position: absolute !important;
+    top: 470px !important;    
+    left: 220px !important;    
+    width: 90px !important;
+    padding: 5px !important;
+    text-align: center !important;
+    height: auto;
+    background-color: rgba(65, 75, 113, 0.7) !important;
+    border-radius: 6px !important;
+    z-index: 5 !important;      
+  }
+
+  header .box .pb1 {
+    font-size: 11px !important;
+    margin: 0 !important;
+  }
+
+  header .box .pb2 {
+    font-size: 18px !important;
+    margin: 2px 0 !important;
+  }
+
+  header .box .pb3 {
+    font-size: 10px !important;
+    margin: 0 !important;
+  }
+
+  header .div2header {
+    width: 100% !important;
+    height: auto !important;
+    text-align: center !important;
+  }
+
+  header .div2header img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+    opacity: .6 !important;
+  }
+  .inabout{
+    width: 450px;
+    height: 40px;
+  }
+
+
+  @media (max-width: 768px) {
+  main {
+    position: relative !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column-reverse !important;
+    align-items: center !important;
+    padding: 20px 10px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    height: auto;
+  }
+
+  main img {
+    width: 100% !important;
+    /* max-width: 240px !important; */
+    height: auto !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+    /* margin-top: 15px !important; */
+    position: relative !important;
+  }
+
+  main .words {
+    width: 100% !important;
+    text-align: center !important;
+    padding: 0 10px !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+    z-index: 2 !important;
+  }
+
+  main .words h1 {
+    font-size: 22px !important; 
+    line-height: 1.3 !important;
+    margin-bottom: 8px !important;
+  }
+
+  main .words p {
+    font-size: 12px !important; 
+    line-height: 1.4 !important;
+    margin: 0 auto !important;
+    max-width: 90% !important;
+  }
+
+  .cc:hover{
+    opacity: .2;
+  }
+}
+}
+@media (max-width: 768px) {
+  .section1 {
+    width: 100% !important;
+    height: auto !important;
+    background-color: black !important;
+    padding: 20px 10px !important;
+    box-sizing: border-box !important;
+  }
+
+  .section1 .bothimgs {
+    width: 100% !important;
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+  .section1 .firstimg,
+  .section1 .secondimg {
+    position: relative !important;
+    width: 100% !important;
+    height: 280px !important; 
+    margin: 0 !important;
+    transform: none !important; 
+    border: none !important;
+    border-radius: 10px !important;
+    background-size: cover !important;
+    background-position: center !important;
+    overflow: hidden !important;
+  }
+
+  .section1 .overlay {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 20px !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+.section1 .secondimg:hover,
+  .section1 .firstimg:hover {
+    width: 100% !important;
+    z-index: 1 !important;
+    cursor: default !important;
+  }
+  .section1 .foverlay,
+  .section1 .soverlay {
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: center !important;
+  }
+
+  .section1 .foverlay {
+    font-size: 20px !important;
+    font-weight: bold !important;
+    margin-bottom: 12px !important;
+    color: #d7d8da !important; 
+  }
+
+  .section1 .soverlay {
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+    color: #ffffff !important;
+    max-width: 90% !important;
+  }
+}
+@media (max-width: 768px) {
+  footer {
+    width: 100% !important;
+    height: auto !important;
+    padding: 35px 15px !important;
+    box-sizing: border-box !important;
+    background-color: #0b0b0b !important;
+    margin-top: -180px;
+  }
+
+  footer .contacts {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 30px 90px !important;
+    width: 100% !important;
+    text-align: left !important;
+    margin-bottom: 25px !important;
+  }
+
+  footer .contact1,
+  footer .contact2,
+  footer .contact4,
+  footer .contact5 {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  footer .contacts strong {
+    font-size: 17px !important; 
+    color: #efeeee !important;
+    margin-bottom: 10px !important;
+    border-bottom: 1.5px solid rgba(225, 223, 221, 0.578) !important;
+    padding-bottom: 5px !important;
+    
+  }
+
+  footer .contacts .liss {
+    font-size: 14px !important;
+    line-height: 1.8 !important;
+    margin: 5px 0 !important;
+    color: #dcdcdc !important;
+  }
+
+  footer .hr {
+    width: 100% !important;
+    height: 1px !important;
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    margin: 20px 0 !important;
+  }
+
+  footer .icoons {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 25px !important;
+
+  }
+
+  footer .icoons a {
+    font-size: 58px !important;
+    color: #ffffff !important;
+  }
+   footer .icoons i {
+    font-size: 38px !important;
+    color: #d5d5d5 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .section3 {
+    width: 100% !important;
+    height: auto !important;
+    padding: 30px 0 60px 0 !important;
+    background-color: #000 !important;
+  }
+
+  .section3 .parentimgs {
+    position: relative !important;
+    width: 100% !important;
+    height: 450px !important; 
+    margin: 0 auto !important;
+  }
+
+  .parentimgs .background,
+  .parentimgs .background img {
+    position: absolute !important;
+    width: 92% !important;
+    height: 250px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    top: 20px !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+    transition: 1s !important;
+  }
+
+  .parentimgs .mini,
+  .parentimgs .mini img {
+    position: absolute !important;
+    width: 100px !important;
+    height: 85px !important;
+    top: 300px !important; 
+    z-index: 5 !important;
+    border-radius: 4px !important;
+  }
+
+  .parentimgs .m1 { left: 10% !important; margin: 0 !important; }
+  .parentimgs .m2 { left: 32% !important; margin: 0 !important; }
+  .parentimgs .m3 { left: 54% !important; margin: 0 !important; }
+  .parentimgs .m4 { left: 76% !important; margin: 0 !important; z-index: 6 !important; }
+
+  .just-overlay {
+    position: absolute !important;
+    height: 100% !important;
+    width: 100% !important;
+    right: 0 !important;
+    z-index: 2 !important;
+    background: rgba(0, 0, 0, 0.2) !important;
+  }
+}
+@media (max-width: 768px) {
+  .section2 {
+    width: 100% !important;
+    height: auto !important;
+    padding: 20px 0 40px 0 !important;
+    overflow: hidden !important;
+  }
+
+  .containers1 {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 25px !important;
+    perspective: 700px !important;
+    width: 100% !important;
+  }
+
+  .pp1 {
+    width: 85% !important;
+    max-width: 300px !important;
+    height: 380px !important;
+    margin-top: 0 !important;
+    transform-style: preserve-3d !important;
+  }
+
+  .pp1 .front,
+  .pp1 .back,
+  .front img {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 5px !important;
+  }
 }
