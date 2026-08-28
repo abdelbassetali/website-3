@@ -1233,4 +1233,7 @@ footer .hr {
     height: 100% !important;
     border-radius: 5px !important;
   }
+    .h1sec{
+    margin-bottom: 30px;
+  }
 }
