@@ -679,6 +679,9 @@ main .circle15 {
     opacity: 1;
 
 }
+  .cc:hover{
+    opacity: .5;
+   background-color: #e5e4e4 !important;  }
 .section3,
 .section3 .parentimgs,
 .parentimgs .background,
@@ -1039,7 +1042,9 @@ footer .hr {
     background-position: center !important;
     overflow: hidden !important;
   }
-
+  .cc:hover{
+    opacity: .5;
+   background-color: #e5e4e4 !important;  }
   .section1 .overlay {
     background-color: rgba(0, 0, 0, 0.1) !important;
     display: flex !important;
