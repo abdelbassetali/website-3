@@ -1210,23 +1210,28 @@ footer .hr {
   .section2 {
     width: 100% !important;
     height: auto !important;
-    padding: 20px 0 40px 0 !important;
-    overflow: hidden !important;
+    padding: 20px 5px 30px 5px !important;
+    overflow-x: hidden !important;
   }
 
   .containers1 {
     display: flex !important;
-    flex-direction: column !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
     align-items: center !important;
-    gap: 25px !important;
+    gap: 12px !important;
+    overflow-x: auto !important; 
+    padding: 10px 5px !important;
     perspective: 700px !important;
     width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   .pp1 {
-    width: 85% !important;
-    max-width: 300px !important;
-    height: 380px !important;
+    flex: 0 0 55% !important;
+    max-width: 150px !important;
+    height: 220px !important;
     margin-top: 0 !important;
     transform-style: preserve-3d !important;
   }
@@ -1236,9 +1241,40 @@ footer .hr {
   .front img {
     width: 100% !important;
     height: 100% !important;
-    border-radius: 5px !important;
+    border-radius: 4px !important;
   }
-    .h1sec{
+
+  .namef {
+    font-size: 16px !important;
+  }
+
+  .loremf {
+    font-size: 10px !important;
+    line-height: 1.3 !important;
+    word-spacing: normal !important;
+    letter-spacing: normal !important;
+  }
+
+  #stars {
+    font-size: 11px !important;
+  }
+
+  .pp1:hover .namef {
+    margin-left: 8px !important;
+    margin-top: 40px !important;
+    opacity: 1;
+  }
+  .pp1:hover .loremf {
+    margin-top: 10px !important;
+    margin-left: 8px !important;
+    opacity: 1;
+  }
+  .pp1:hover #stars {
+    margin-top: 8px !important;
+    margin-left: 8px !important;
+    opacity: 1;
+  }  .h1sec{
     margin-bottom: 30px;
   }
 }
+ 
