@@ -1691,3 +1691,16 @@ main .circle12:hover {
     left: 40%;
 }
 }
+@media (max-width: 576px) {
+  html, body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  * {
+    box-sizing: border-box !important;
+  }
+}
